@@ -138,7 +138,7 @@ jobs:
         with:
           host: ${{ secrets.YP_HOST }}
           username: ${{ secrets.YP_SSH_USER }}
-          key: ${{ secrets.YP_SSH_KEYSSH_KEY }}
+          key: ${{ secrets.YP_SSH_KEY }}
           passphrase: ${{ secrets.YP_SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
           target: "taski"
