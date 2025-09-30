@@ -132,14 +132,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        
+
       - name: Copy docker-compose.yml via ssh
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.YP_HOSTHOST }}
-          username: ${{ secrets.YP_SSH_USERUSER }}
+          host: ${{ secrets.YP_HOST }}
+          username: ${{ secrets.YP_SSH_USER }}
           key: ${{ secrets.YP_SSH_KEYSSH_KEY }}
-          passphrase: ${{ secrets.YP_SSH_PASSPHRASESSH_PASSPHRASE }}
+          passphrase: ${{ secrets.YP_SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
           target: "taski"
 
